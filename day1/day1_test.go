@@ -16,9 +16,9 @@ import (
 //	scanner := bufio.NewScanner(file)
 
 func TestPart2Uneven(t *testing.T) {
-	file, error := os.Open("test_data/not_multiple_of_3.txt")
+	file, err := os.Open("test_data/not_multiple_of_3.txt")
 
-	if error != nil {
+	if err != nil {
 		t.Fatalf("Can't open test data")
 	}
 
@@ -26,9 +26,9 @@ func TestPart2Uneven(t *testing.T) {
 
 	result := part2(scanner)
 
-	pint, error := strconv.ParseInt(result, 10, 64)
+	pint, err := strconv.ParseInt(result, 10, 64)
 
-	if error != nil {
+	if err != nil {
 		t.Fatalf("Expected int but got something else: %s", result)
 	}
 
@@ -38,9 +38,9 @@ func TestPart2Uneven(t *testing.T) {
 }
 
 func TestPart2StandardFirstBigger(t *testing.T) {
-	file, error := os.Open("test_data/standard_1.txt")
+	file, err := os.Open("test_data/standard_1.txt")
 
-	if error != nil {
+	if err != nil {
 		t.Fatalf("Can't open test data")
 	}
 
@@ -48,9 +48,9 @@ func TestPart2StandardFirstBigger(t *testing.T) {
 
 	result := part2(scanner)
 
-	pint, error := strconv.ParseInt(result, 10, 64)
+	pint, err := strconv.ParseInt(result, 10, 64)
 
-	if error != nil {
+	if err != nil {
 		t.Fatalf("Expected int but got something else: %s", result)
 	}
 
@@ -60,9 +60,9 @@ func TestPart2StandardFirstBigger(t *testing.T) {
 }
 
 func TestPart2StandardSecondBigger(t *testing.T) {
-	file, error := os.Open("test_data/standard_2.txt")
+	file, err := os.Open("test_data/standard_2.txt")
 
-	if error != nil {
+	if err != nil {
 		t.Fatalf("Can't open test data")
 	}
 
@@ -70,9 +70,9 @@ func TestPart2StandardSecondBigger(t *testing.T) {
 
 	result := part2(scanner)
 
-	pint, error := strconv.ParseInt(result, 10, 64)
+	pint, err := strconv.ParseInt(result, 10, 64)
 
-	if error != nil {
+	if err != nil {
 		t.Fatalf("Expected int but got something else: %s", result)
 	}
 
@@ -82,9 +82,9 @@ func TestPart2StandardSecondBigger(t *testing.T) {
 }
 
 func TestPart2Insufficient(t *testing.T) {
-	file, error := os.Open("test_data/insufficient_data.txt")
+	file, err := os.Open("test_data/insufficient_data.txt")
 
-	if error != nil {
+	if err != nil {
 		t.Fatalf("Can't open test data")
 	}
 
@@ -92,9 +92,9 @@ func TestPart2Insufficient(t *testing.T) {
 
 	result := part2(scanner)
 
-	pint, error := strconv.ParseInt(result, 10, 64)
+	pint, err := strconv.ParseInt(result, 10, 64)
 
-	if error != nil {
+	if err != nil {
 		t.Fatalf("Expected int but got something else: %s", result)
 	}
 

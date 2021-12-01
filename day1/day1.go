@@ -17,9 +17,9 @@ func part1(scanner *bufio.Scanner) string {
 	for scanner.Scan() {
 		thisLine := scanner.Text()
 
-		parsedInt, error := strconv.ParseInt(thisLine, 10, 64)
+		parsedInt, err := strconv.ParseInt(thisLine, 10, 64)
 
-		if error != nil {
+		if err != nil {
 			log.Panicln("Data not an int!")
 		}
 
@@ -63,8 +63,8 @@ func part2(scanner *bufio.Scanner) string {
 	for scanner.Scan() {
 		thisLine := scanner.Text()
 
-		parsedInt, error := strconv.ParseInt(thisLine, 10, 64)
-		if error != nil {
+		parsedInt, err := strconv.ParseInt(thisLine, 10, 64)
+		if err != nil {
 			log.Fatalln("Data not an int!")
 		}
 
@@ -91,9 +91,9 @@ func main() {
 
 	flag.Parse()
 
-	file, error := os.Open(*inputPath)
+	file, err := os.Open(*inputPath)
 
-	if error != nil {
+	if err != nil {
 		log.Fatalln("Invalid input file!")
 	}
 
